@@ -1,4 +1,4 @@
-package com.massimo.primeNumberSeq.multithread;
+package prime_number_seq.multi;
 
 import static org.junit.Assert.*;
 
@@ -13,6 +13,8 @@ import java.util.concurrent.Future;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import prime_number_seq.multi.AtomicBigInteger;
 
 public class AtomicBigIntegerTest {
 	

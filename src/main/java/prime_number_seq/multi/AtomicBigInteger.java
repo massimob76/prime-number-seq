@@ -1,4 +1,4 @@
-package com.massimo.primeNumberSeq.multithread;
+package prime_number_seq.multi;
 
 import java.math.BigInteger;
 import java.util.concurrent.atomic.AtomicReference;

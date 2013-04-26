@@ -1,8 +1,7 @@
-package com.massimo.primeNumberSeq;
+package prime_number_seq.single;
 
 import static org.junit.Assert.*;
-import static com.massimo.primeNumberSeq.Sequence.TWO;
-import static com.massimo.primeNumberSeq.Sequence.isPrime;
+import static prime_number_seq.Helper.TWO;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -10,27 +9,10 @@ import java.util.List;
 
 import org.junit.Test;
 
+import prime_number_seq.single.Sequence;
+
+
 public class SequenceTest {
-	
-	@Test
-	public void isPrimeShouldRecognizeOneAsPrimeNumber() {
-		assertTrue(isPrime(BigInteger.ONE));
-	}
-	
-	@Test
-	public void isPrimeShouldRecognizeTwoAsPrimeNumber() {
-		assertTrue(isPrime(TWO));
-	}
-	
-	@Test
-	public void isPrimeShouldRecognizeThreeAsPrimeNumber() {
-		assertTrue(isPrime(BigInteger.valueOf(3L)));
-	}
-	
-	@Test
-	public void isPrimeShouldRecognizeFourNotAsPrimeNumber() {
-		assertFalse(isPrime(BigInteger.valueOf(4L)));
-	}
 	
 	@Test
 	public void createSequenceOfOneElement() {

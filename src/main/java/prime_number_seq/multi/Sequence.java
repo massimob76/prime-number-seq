@@ -1,4 +1,4 @@
-package com.massimo.primeNumberSeq.multithread;
+package prime_number_seq.multi;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -10,9 +10,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.massimo.primeNumberSeq.Sequence;
+import prime_number_seq.Helper;
 
-public class SequenceMultithread {
+
+public class Sequence {
 	
 	private final AtomicBigInteger num = new AtomicBigInteger(BigInteger.ONE);
 	private final AtomicInteger index = new AtomicInteger(0);
@@ -20,7 +21,6 @@ public class SequenceMultithread {
 	
 	private static final int NO_OF_THREADS = 4;
 
-	
 	public List<BigInteger> create(final int n) throws InterruptedException, ExecutionException {
 		
 		Runnable runnable = new Runnable() {
@@ -29,7 +29,7 @@ public class SequenceMultithread {
 				int currentIndex = index.getAndIncrement();
 				while (currentIndex < n) {
 					BigInteger candidate = num.getAndIncrement();
-					if (Sequence.isPrime(candidate)) {
+					if (Helper.isPrime(candidate)) {
 						currentIndex = index.getAndIncrement();
 						seq.add(candidate);
 					}
